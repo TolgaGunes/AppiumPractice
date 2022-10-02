@@ -12,7 +12,7 @@ public class FirstAppiumTest {
     AppiumDriver<MobileElement> driver;
 
     @Test
-    public void test1() throws MalformedURLException, InterruptedException {
+    public void openCalculator() throws MalformedURLException, InterruptedException {
         //DesiredCapabilities
         DesiredCapabilities capabilities = new DesiredCapabilities();
         // capabilities.setCapability("deviceName", "Pixel 3");
