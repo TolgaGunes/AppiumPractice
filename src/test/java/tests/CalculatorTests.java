@@ -14,7 +14,6 @@ import java.net.URL;
 
 public class CalculatorTests {
 
-
     @Test
     public void openCalculator() throws MalformedURLException, InterruptedException {
         //DesiredCapabilities
@@ -42,11 +41,5 @@ public class CalculatorTests {
         // locate AC element on calculator using AccessibilityID ("clear")
         MobileElement clearElement = driver.findElement(MobileBy.AccessibilityId("clear"));
         System.out.println("Text of Mobile Element= " + clearElement.getText());
-
     }
-
-
-
-
-
 }
