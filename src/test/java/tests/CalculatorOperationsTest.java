@@ -83,12 +83,10 @@ public class CalculatorOperationsTest {
         int expResult = 3;
 
         Assertions.assertEquals(expResult, Integer.parseInt(actualResult));
-
     }
 
     @AfterEach
     public  void cleanUp() {
         driver.closeApp();
     }
-
 }
