@@ -1,7 +1,9 @@
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -27,9 +29,18 @@ public class CalculatorTests {
 
         //launch appiumDriver
         AppiumDriver<MobileElement> driver = new AndroidDriver<MobileElement>(url, capabilities);
-        Thread.sleep(3000);
+
         //close app
         // driver.closeApp();
+
+        System.out.println("driver.getDeviceTime() = " + driver.getDeviceTime());
+        Assertions.assertEquals("android", driver.getPlatformName());
+        Thread.sleep(3000);
+
+        // locate AC element on calculator using AccessibilityID ("clear")
+        MobileElement clearElement = driver.findElement(MobileBy.AccessibilityId("clear"));
+        System.out.println("Text of Mobile Element= " + clearElement.getText());
+
     }
 
 
