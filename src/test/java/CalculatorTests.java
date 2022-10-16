@@ -8,7 +8,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class FirstAppiumTest {
+public class CalculatorTests {
+
 
     @Test
     public void openCalculator() throws MalformedURLException, InterruptedException {
@@ -28,6 +29,11 @@ public class FirstAppiumTest {
         AppiumDriver<MobileElement> driver = new AndroidDriver<MobileElement>(url, capabilities);
         Thread.sleep(3000);
         //close app
-       // driver.closeApp();
+        // driver.closeApp();
     }
+
+
+
+
+
 }
